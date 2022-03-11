@@ -55,7 +55,7 @@ class VGG_16(nn.Module):
         temp = self.dropout(temp)
         temp = self.relu(self.linear2(temp))
         temp = self.dropout(temp)
-        temp = self.linear3(temp)
+        temp = self.relu(self.linear3(temp))
         temp = self.sofmax(temp)
         return temp
 
